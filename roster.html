@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html ng-app="rosterApp">
+
+<head>
+  <title>Sports Team Roster</title>
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Custom Stylesheet-->
+  <link rel="stylesheet" href="LandingPageCS.css">
+
+  <!-- NHL Logo for Title-->
+  <link rel="icon" href="https://www-league.nhlstatic.com/images/logos/league-dark/133-flat.svg" type="image/icon type">
+
+</head>
+
+<body ng-controller="rosterCtrl" class="container">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img id="logo" alt="Brand" src="https://www-league.nhlstatic.com/images/logos/league-dark/133-flat.svg"
+            width="30">
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+          <!-- Team Choice Dropdown-->
+
+          <li class="nav-item dropdown multi-level-dropdown">
+            <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Teams</a>
+            <ul class="dropdown-menu mt-2 rounded-0 primary-color border-0 z-depth-1">
+
+              <!-- Western Conference Dropdown -->
+
+              <li class="dropdown-item dropdown-submenu p-0">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100"><img
+                    src="https://content.sportslogos.net/logos/1/984/thumbs/6859.gif" height="20" width="30"> Western
+                  Conference </a>
+                <ul class="dropdown-menu ml-2 rounded-0 primary-color border-0 z-depth-1">
+
+                  <!-- Pacific Division Sublevel -->
+
+                  <li class="dropdown-item dropdown-submenu p-0">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Pacific Division</a>
+
+                    <ul class="dropdown-menu mr-2 rounded-0 primary-color border-0 z-depth-1 r-100 ">
+
+                      <!-- Pacific Division Teams -->
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/1736/thumbs/173616512014.gif" height="20"
+                            width="30"> Anaheim Ducks</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/5263/thumbs/526378072015.gif" height="20"
+                            width="30"> Arizona Coyotes</a>
+                      </li>
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/5/thumbs/548202021.gif" height="20" width="30">
+                          Calgary Flames</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/12/thumbs/1227282018.gif" height="20"
+                            width="30"> Edmonton Oilers</a>
+                      </li>
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/14/thumbs/1422202020.gif" height="20"
+                            width="30"> Los Angeles Kings</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/26/thumbs/dmo1xf3z4pph27vmg3gf.gif" height="20"
+                            width="30"> San Jose Sharks</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/29/thumbs/2920842020.gif" height="20"
+                            width="30"> Vancouver Canucks</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/6114/thumbs/611426842018.gif" height="20"
+                            width="30"> Vegas Golden Knights</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- Central Division Sublevel -->
+
+                  <li class="dropdown-item dropdown-submenu p-0">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Central Division</a>
+                    <ul class="dropdown-menu mr-2 rounded-0 primary-color border-0 z-depth-1 r-100 ">
+
+                      <!-- Central Division Teams -->
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/7/thumbs/56.gif" height="20" width="30">
+                          Chicago Blackhawks</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/8/thumbs/64.gif" height="20" width="30">
+                          Colorado Avalanche</a>
+                      </li>
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/10/thumbs/1079172014.gif" height="20"
+                            width="30"> Dallas Stars</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/15/thumbs/1588102014.gif" height="20"
+                            width="30"> Minnesota Wild</a>
+                      </li>
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/17/thumbs/lvchw3qfsun2e7oc02kh2zxb6.gif"
+                            height="20" width="30"> Nashville Predators</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/25/thumbs/187.gif" height="20" width="30"> St.
+                          Louis Blues</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/3050/thumbs/z9qyy9xqoxfjn0njxgzoy2rwk.gif"
+                            height="20" width="30"> Winnipeg Jets</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Eastern Conference Dropdown -->
+
+              <li class="dropdown-item dropdown-submenu p-0">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100"><img
+                    src="https://content.sportslogos.net/logos/1/985/thumbs/6857.gif" height="20" width="30"> Eastern
+                  Conference</a>
+                <ul class="dropdown-menu ml-2 rounded-0 primary-color border-0 z-depth-1">
+
+                  <!-- Atlantic Division Sublevel -->
+
+                  <li class="dropdown-item dropdown-submenu p-0">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Atlantic Division</a>
+
+                    <ul class="dropdown-menu mr-2 rounded-0 primary-color border-0 z-depth-1 r-100 ">
+
+                      <!-- Atlantic Division Teams -->
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/3/thumbs/venf9fmhgnsawnxxvehf.gif" height="20"
+                            width="30"> Boston Bruins</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/4/thumbs/454932021.gif" height="20" width="30">
+                          Buffalo Sabres</a>
+                      </li>
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/11/thumbs/yo3wysbjtagzmwj37tb11u0fh.gif"
+                            height="20" width="30"> Detroit Red Wings</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/13/thumbs/1380782017.gif" height="20"
+                            width="30"> Florida Panthers</a>
+                      </li>
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/16/thumbs/124.gif" height="20" width="30">
+                          Montreal Canadiens</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/21/thumbs/2111292021.gif" height="20"
+                            width="30"> Ottawa Senators</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/27/thumbs/97hhvk8e5if0riesnex30etgz.gif"
+                            height="20" width="30"> Tampa Bay Lightning</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/28/thumbs/2887612017.gif" height="20"
+                            width="30"> Toronto Maples Leafs</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- Metropolitan Division Sublevel -->
+
+                  <li class="dropdown-item dropdown-submenu p-0">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Metropolitan
+                      Division</a>
+
+                    <ul class="dropdown-menu mr-2 rounded-0 primary-color border-0 z-depth-1 r-100 ">
+
+                      <!-- Metropolitan Division Teams -->
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/6/thumbs/fotih31tn5r345nufo5xxayh3.gif"
+                            height="20" width="30"> Carolina Hurricanes</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/9/thumbs/jhepegs329pc7ugyypebl28wg.gif"
+                            height="20" width="30"> Columbus Blue Jackets</a>
+                      </li>
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/22/thumbs/161.gif" height="20" width="30">
+                          Philadelphia Flyers</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/24/thumbs/2463622017.gif" height="20"
+                            width="30"> Pittsburgh Penguins</a>
+                      </li>
+
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/18/thumbs/32tfs723a3bes0p0hb4hgcy1u.gif"
+                            height="20" width="30"> New Jersey Devils</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/19/thumbs/1939112018.gif" height="20"
+                            width="30"> New York Islanders</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/20/thumbs/144.gif" height="20" width="30"> New
+                          York Rangers</a>
+                      </li>
+                      <li class="dropdown-item p-0">
+                        <a href="#" class="text-white w-100"><img
+                            src="https://content.sportslogos.net/logos/1/30/thumbs/llrs2zxi127vkqgcsvfb.gif" height="20"
+                            width="30"> Washington Capitals</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Roster Lineitem-->
+
+          <li><a href="#">Rosters</a></li>
+
+          <!-- Year Selection Dropdown-->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Years <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">2020-21</a></li>
+              <li><a href="#">2021-22</a></li>
+              <li><a href="#">2022-23</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <!-- Misc Lineitem-->
+
+          <li><a href="#">Link</a></li>
+
+          <!-- NHL Recrords Dropdown-->
+
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">NHL Records <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="page-header">
+    <h1>Team Roster <small>Detroit Red Wings</small></h1>
+  </div>
+
+  <h4>New Player</h4>
+  <form class="form-inline" role="form" ng-submit="addPlayer()">
+    <div class="form-group">
+      <label class="sr-only" for="firstname">First name</label>
+      <input type="text" ng-model="newPlayer.firstname" class="form-control" id="firstname"
+        placeholder="Enter first name">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="lastname">Last name</label>
+      <input type="text" ng-model="newPlayer.lastname" class="form-control" id="lastname" placeholder="Enter last name">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="age">Age</label>
+      <input type="number" ng-model="newPlayer.age" class="form-control" id="age" placeholder="Enter age">
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="overall">Overall</label>
+      <input type="overall" ng-model="newPlayer.overall" class="form-control" id="email" placeholder="Enter overall">
+    </div>
+    <div class="form-group">
+      <select class="form-control" ng-model="newPlayer.position">
+        <option value="left wing">Left Wing</option>
+        <option value="center">Center</option>
+        <option value="right wing">Right Wing</option>
+        <option value="defenseman">Defenseman</option>
+        <option value="goaltender">Goaltender</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add</button>
+  </form>
+
+  <hr />
+
+  <table ng-cloak class="table table-hover table-condensed" ng-show="players.length">
+    <thead>
+      <tr>
+        <th><a href="" ng-click="predicate='firstname'; reverse=!reverse">
+            First Name <span
+              ng-class="{'glyphicon glyphicon-chevron-down': predicate=='firstname' && reverse, 'glyphicon glyphicon-chevron-up': predicate=='firstname' && !reverse}"></span></a>
+        </th>
+        <th><a href="" ng-click="predicate='lastname'; reverse=!reverse">
+            Last Name <span
+              ng-class="{'glyphicon glyphicon-chevron-down': predicate=='lastname' && reverse, 'glyphicon glyphicon-chevron-up': predicate=='lastname' && !reverse}"></span></a>
+        </th>
+        <th>Age</th>
+        <th>Position</a></th>
+        <th>Overall</a></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tr ng-repeat="player in players | orderBy:predicate:reverse" class="player">
+      <td>{{player.firstname}}</td>
+      <td>{{player.lastname}}</td>
+      <td>{{player.age}}</td>
+      <td>{{player.position | uppercase}}</td>
+      <td ng-bind-html="player.overall | linky"></td>
+      <td>
+        <button class="btn btn-danger" ng-click="removePlayer(player)"><span class="glyphicon glyphicon-remove"></span>
+          Remove</button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="alert alert-info" ng-hide="players.length" ng-cloak>
+    <strong>No players on the roster.</strong> Please add players.
+  </div>
+
+</body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="Landing Page/LandingPageJS.js"></script>
+
+<script src="http://code.angularjs.org/1.2.0rc1/angular.min.js"></script>
+<script src="http://code.angularjs.org/1.2.0rc1/angular-sanitize.min.js"></script>
+<script src="http://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
+<script src="roster.js"></script>
+
+</html>
