@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#navContainer {
+    background-color: grey;
+    margin: 0;
+    padding: 10px 0 10px 0;
+}
+
+#navBar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbarItem {
+    color: white;
+}
+
+.navbarItem:hover {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
