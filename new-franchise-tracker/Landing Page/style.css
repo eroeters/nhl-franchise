@@ -42,4 +42,28 @@ ul {
     list-style-type: none;
 }
 
+/* footer */
+
+#footer {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: grey;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.footerIcons {
+    width: 30px;
+    height: auto;
+    margin: 5px;
+}
+
+button {
+    width: 100%;
+    border-radius: 50px black;
+}
+
 

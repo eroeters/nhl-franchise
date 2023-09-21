@@ -11,6 +11,8 @@
     padding: 10px 0 10px 0;
 }
 
+/* navBar */
+
 #navBar {
     display: flex;
     justify-content: space-around;
@@ -30,4 +32,50 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+/* footer */
+
+#footer {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: grey;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.footerIcons {
+    width: 30px;
+    height: auto;
+    margin: 5px;
+}
+
+/* main roster container */
+
+#rosterContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#forwardLines {
+    display: flex;
+    justify-content: center;
+}
+
+#defensePairs {
+    display: flex;
+    justify-content: center;
+}
+
+#goalieTandem {
+    display: flex;
+    justify-content: center;
+}
+
+.yearToggleButton {
+    width: 100%;
+    border: none; 
 }
